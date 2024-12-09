@@ -1,0 +1,168 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 300 to 800 */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #023c7e;
+    color: rgb(255,255,255);
+    margin: 0;
+    line-height: 1.5;
+    font-optical-sizing: none; /*(auto; nýtt - virkar ekki í open sans) https://developer.mozilla.org/en-US/docs/Web/CSS/font-optical-sizing */
+    font-variation-settings: "wdth" 100; /* (nýtt - virkar ekki í open sans) https://developer.mozilla.org/en-US/docs/Web/CSS/font-variation-settings */
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+article {
+    background-color: rgba(233, 206, 156, 0.473);
+    padding: 2rem;
+    border-radius: 5rem;
+}
+figcaption {
+    font-size: .9;
+    font-style: italic;
+}
+.bg-grunnur {
+    background-image: linear-gradient(to bottom, #ffe600, #ffaa00, #b700ff);
+}
+.bg-gradient {
+    background-image: linear-gradient(rgb(4,0,0, .4), rgb(4,0,0, 0));
+}
+header, main, footer {
+    padding: 1em;
+}
+header h1 {
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    margin: 0;
+    color: rgb(214, 233, 196);
+}
+.topnav {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background-image: linear-gradient(#028aa2, #c2a31b);
+}
+.topnav a{
+    padding: .5em 1em;
+    border-bottom: 1px solid rgb(247, 223, 181);
+}
+.topnav a,
+.footernav a {
+    display: block;
+    color: rgb(247, 223, 181);
+    text-decoration: none;
+    text-align: center;
+}
+footer {
+    line-height: 1.8;
+}
+main {
+    color: rgb(44, 40, 40);
+}
+main a {
+    color: #023c7e;
+}
+a:visited {
+    color: purple;
+}
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+/* Grid */
+
+.col-3, .col-32, .col-23 {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+}
+.copy {
+    text-align: center;
+}
+
+/* viðmið - breakpoints */
+
+.upp {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    z-index: 3;
+    border: 0;
+    border-radius: 1rem;
+    padding: 0 .5rem;
+    color: wheat;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+@media screen and (min-width:37.5rem){ /* 600px */
+
+    .topnav {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .topnav a {
+        border: 0;
+        border-right: 1px solid rgb(243, 215, 175);
+    }
+    .topnav a:last-child {
+        border:0;
+    }
+    .footernav a {
+        text-align: left;
+    }
+}
+@media screen and (min-width:48rem){  /* 760px */
+    body {
+        line-height: 1.5;
+    }
+    .col-3 {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+    .col-23 {
+        grid-template-columns: 3fr 4fr;
+    }
+    .col-32 {
+        grid-template-columns: 4fr 2fr;
+    }
+}
+@media screen and (min-width: 60rem){  /* 960px */
+
+    header, main, footer {
+        max-width: 60em;
+        margin: 0 auto;
+    }
+    header h1 {
+        font-size: 2.5rem;
+    }
+    .col-3 {
+        gap: 3rem;
+    }
+    .col-23 {
+        grid-template-columns: 2fr 3fr;
+    }
+    .col-32 {
+        grid-template-columns: 3fr 2fr;
+    }
+}
+@media screen and (min-width: 80rem){ 
+
+    header, main, footer {
+        max-width: 80em;
+    }
+    header h1 {
+        font-size: 3.5rem;
+    }
+    .copy {
+        padding-bottom: 3rem;
+    }
+}
