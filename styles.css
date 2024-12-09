@@ -96,7 +96,9 @@ ul {
     text-align: left;
 }
 /* viðmið - breakpoints */
-
+.col-32 img {
+    padding-left: 1rem;
+}
 .upp {
     position: fixed;
     bottom: 1rem;
