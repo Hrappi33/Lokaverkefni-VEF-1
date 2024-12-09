@@ -36,27 +36,6 @@ iframe {
     }
  }
 
- @media screen and (min-width:48rem){
-  .gluggi {
-    height:24.6rem; /*414px;*/ 
-  }
-}
-@media screen and (min-width:60rem){
-  .gluggi {
-    height:33rem; /*534px;*/ 
-  }
-}
-@media screen and (min-width: 80rem) {
-    .gluggi {  
-      height:44rem; /*~702px;*/ 
-    }
-  } 
-  @media screen and (min-width: 100rem) {
-    .gluggi {  
-      height:52.3rem; /*~827px;*/ 
-    }
-  } 
-
 /* google kort */
 
 @media screen and (min-width: 20rem) {
